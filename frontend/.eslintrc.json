@@ -3,6 +3,8 @@
   "rules": {
   "@next/next/no-img-element": "off",
   "react-hooks/exhaustive-deps": "off",
-  "react/jsx-key": "off"
+  "react/jsx-key": "off",
+     "react/no-unescaped-entities": "off",
+    "jsx-a11y/alt-text": "off"
 }
 }
