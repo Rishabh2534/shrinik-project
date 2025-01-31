@@ -1,0 +1,5 @@
+# Handle line endings automatically
+* text=auto
+
+# Ensure node_modules is treated as binary and ignored for line-ending changes
+node_modules/* binary
