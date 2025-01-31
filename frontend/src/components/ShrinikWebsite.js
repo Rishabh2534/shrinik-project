@@ -1,24 +1,24 @@
 "use client";
 import React, { useState,useEffect, useCallback,useRef } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
-import { Tabs, TabsList, TabsTrigger, TabsContent } from './ui/tabs';
+//import { Tabs, TabsList, TabsTrigger, TabsContent } from './ui/tabs';
 
-import { Badge } from './ui/badge.js';
+//import { Badge } from './ui/badge.js';
 import LoginPage from './loginPage';
 import TeamsPage from './TeamsPage';
 
-import axios from 'axios';//
+//import axios from 'axios';//
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaYoutube, FaInstagram, FaRss } from 'react-icons/fa';
 
 import { 
-  Code,   Palette,   Gamepad2,   Music, Home, Info, Users, Target, 
-  Calendar, MessageCircle, LogIn , BookOpen, Bird, Shield, 
+  Code,   Palette,   Gamepad2,   Music, Home, Users, Target, 
+  Calendar, MessageCircle, LogIn , Bird, Shield, 
   ArrowRight, ArrowLeft, Zap, 
   Database, Rocket,
-  Camera, PenTool,  Instagram,Mail, Book, Star, Globe,
+  Camera, PenTool, Book, Star, Globe,
   Magnet, 
 } from 'lucide-react';
-import { motion,AnimatePresence,useScroll,useTransform } from 'framer-motion';
+import { motion,AnimatePresence } from 'framer-motion';
 
 import Link from 'next/link';
 const Check=()=>{
