@@ -95,7 +95,7 @@ const AdminPanel = () => {
     }
   };
   const handleDeleteAdmin=async(admin)=>{
-    let id=member.id;
+    let id=admin.id;
     try {
       const res = await fetch(`http://localhost:3000/api/admin/delete/${id}`, {
         method: 'DELETE',
