@@ -51,7 +51,7 @@ const Gallery = () => {
   useEffect(() => {
     const fetchPhoto = async () => {
       try {
-        const res = await fetch('http://localhost:3000/api/getGallary');
+        const res = await fetch('https://shrinik-project.onrender.com/api/getGallary');
         const data = await res.json();
         console.log('Fetched pictures:', data); // Log the fetched data
         if (Array.isArray(data)) {
@@ -833,7 +833,7 @@ const Avenues = () => {
   useEffect(() => {
     const fetchPhoto = async () => {
       try {
-        const res = await fetch('http://localhost:3000/api/getGallary');
+        const res = await fetch('https://shrinik-project.onrender.com/api/getGallary');
         const data = await res.json();
         console.log('Fetched pictures:', data); // Log the fetched data
         if (Array.isArray(data)) {
@@ -914,7 +914,7 @@ const Events = () => {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const res = await fetch('http://localhost:3000/api/events/list');
+        const res = await fetch('https://shrinik-project.onrender.com/api/events/list');
         const data = await res.json();
         console.log('Fetched events:', data);
         if (Array.isArray(data)) {
