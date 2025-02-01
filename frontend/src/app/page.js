@@ -1,4 +1,4 @@
-import ShrinikWebsite from '@/components/ShrinikWebsite';
+import ShrinikWebsite from '@/src/components/ShrinikWebsite';
 
 export default function Home() {
   
