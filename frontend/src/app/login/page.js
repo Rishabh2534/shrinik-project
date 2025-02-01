@@ -32,7 +32,7 @@ export default function LoginPage() {
   
     try {
       // Assuming you have an API endpoint to verify login credentials
-      const response = await fetch('http://localhost:3000/api/login', {
+      const response = await fetch('https://shrinik-project.onrender.com/api/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -76,7 +76,7 @@ export default function LoginPage() {
     
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:3000/api/register', {
+      const response = await fetch('https://shrinik-project.onrender.com/api/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
