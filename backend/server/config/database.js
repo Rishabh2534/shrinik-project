@@ -3,12 +3,17 @@
 import mysql from 'mysql';
 
 const connection= mysql.createConnection({
-     host: "sql201.infinityfree.com",   // Your MySQL Hostname
-    user: "if0_37994069",              // Your MySQL Username
-    password: "fWiNgMspmtWgyQe",         // Your MySQL Password (keep it secret)
-    database: "if0_37994069_shrinik",  // Your MySQL Database Name
+  /*   Host: "sql12.freesqldatabase.com",
+Database name: sql12760643
+Database user: sql12760643
+ password: 7ZuJ1DgaPM
+*/
+     host: "sql12.freesqldatabase.com",   // Your MySQL Hostname
+    user: "sql12760643",              // Your MySQL Username
+    password: "7ZuJ1DgaPM",         // Your MySQL Password (keep it secret)
+    database: "sql12760643",  // Your MySQL Database Name
     port: 3306  
-    /*host: 'sql201.infinityfree.com', // Updated host
+   /* host: 'sql201.infinityfree.com', // Updated host
     user: 'if0_37994069',           // Updated username
     password: 'Mishra@123',    // Updated password
     database: 'if0_37994069_shrinik',   // Updated database name
