@@ -27,7 +27,7 @@ const corsOptions={
     credentials:true
 }
 app.use(cors({
-    origin: 'http://localhost:3001',
+    origin: 'https://shrinik-project.vercel.app/',
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
   }));
