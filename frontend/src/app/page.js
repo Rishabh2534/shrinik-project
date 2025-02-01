@@ -1,4 +1,4 @@
-import {ShrinikWebsite }from '../../components/ShrinikWebsite.js';
+import {ShrinikWebsite }from '../components/ShrinikWebsite.js';
 
 export default function Home() {
   
