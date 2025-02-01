@@ -28,7 +28,7 @@ const AdminPanel = () => {
     }
     console.log("data",data);
     const methd='PUT';
-    const res = await fetch('http://localhost:3000/api/addmember', {
+    const res = await fetch('https://shrinik-project.onrender.com/api/addmember', {
       method: methd,
       body: data,
     });
@@ -41,12 +41,12 @@ const AdminPanel = () => {
       team: '',
       linkedinUrl: ''
     });
-    const updatedMemberList = await (await fetch('http://localhost:3000/api/Allmember/list')).json();
+    const updatedMemberList = await (await fetch('https://shrinik-project.onrender.com/api/Allmember/list')).json();
     setMemberList(updatedMemberList);
   };
   const fetchMembers=async()=>{
     try {
-      const res = await fetch('http://localhost:3000/api/Allmember/list');
+      const res = await fetch('https://shrinik-project.onrender.com/api/Allmember/list');
       const data = await res.json();
       console.log('Fetched members:', data); // Log the fetched data
       if (Array.isArray(data)) {
@@ -62,7 +62,7 @@ const AdminPanel = () => {
  
     let id=member.id;
     try {
-      const res = await fetch(`http://localhost:3000/api/member/delete/${id}`, {
+      const res = await fetch(`https://shrinik-project.onrender.com/api/member/delete/${id}`, {
         method: 'DELETE',
       });
       const result = await res.json();
@@ -77,12 +77,12 @@ const AdminPanel = () => {
     }
 
     // Refresh the event list
-    const updatedMember = await (await fetch('http://localhost:3000/api/Allmember/list')).json();
+    const updatedMember = await (await fetch('https://shrinik-project.onrender.com/api/Allmember/list')).json();
     setMemberList(updatedMember);
   };
   const fetchAdmins=async()=>{
     try {
-      const res = await fetch('http://localhost:3000/api/Alladmin/list');
+      const res = await fetch('https://shrinik-project.onrender.com/api/Alladmin/list');
       const data = await res.json();
       console.log('Fetched members:', data); // Log the fetched data
       if (Array.isArray(data)) {
@@ -97,7 +97,7 @@ const AdminPanel = () => {
   const handleDeleteAdmin=async(admin)=>{
     let id=admin.id;
     try {
-      const res = await fetch(`http://localhost:3000/api/admin/delete/${id}`, {
+      const res = await fetch(`https://shrinik-project.onrender.com/api/admin/delete/${id}`, {
         method: 'DELETE',
       });
       const result = await res.json();
@@ -112,7 +112,7 @@ const AdminPanel = () => {
     }
 
     // Refresh the event list
-    const updatedMember = await (await fetch('http://localhost:3000/api/getAdmin/list')).json();
+    const updatedMember = await (await fetch('https://shrinik-project.onrender.com/api/getAdmin/list')).json();
     setAdminList(updatedMember);
   };
 
@@ -134,7 +134,7 @@ const AdminPanel = () => {
   useEffect(() => {
     const fetchEvents = async () => {
       try {
-        const res = await fetch('http://localhost:3000/api/events/list');
+        const res = await fetch('https://shrinik-project.onrender.com/api/events/list');
         const data = await res.json();
         console.log('Fetched events:', data); // Log the fetched data
         if (Array.isArray(data)) {
@@ -148,7 +148,7 @@ const AdminPanel = () => {
     };
     const fetchpictures= async()=>{
       try{  
-        const res = await fetch('http://localhost:3000/api/getGallary');
+        const res = await fetch('https://shrinik-project.onrender.com/api/getGallary');
         const data = await res.json();
         console.log('Fetched pic:', data); // Log the fetched data
         if (Array.isArray(data)) {
@@ -198,7 +198,7 @@ const AdminPanel = () => {
       data.append('image', file);
     }
 
-    const url = editEventId ? `http://localhost:3000/api/events/updateEvent/${editEventId}` : 'http://localhost:3000/api/events/create';
+    const url = editEventId ? `https://shrinik-project.onrender.com/api/events/updateEvent/${editEventId}` : 'https://shrinik-project.onrender.com/api/events/create';
     const method = editEventId ? 'PUT' : 'POST';
 
     const res = await fetch(url, {
@@ -220,7 +220,7 @@ const AdminPanel = () => {
     setFile(null);
 
     // Refresh the event list
-    const updatedEvents = await (await fetch('http://localhost:3000/api/events/list')).json();
+    const updatedEvents = await (await fetch('https://shrinik-project.onrender.com/api/events/list')).json();
     setEvents(updatedEvents);
   };
   const handleImageSubmit= async(e)=>{
@@ -229,7 +229,7 @@ const AdminPanel = () => {
     data.append('ImageFor',pictureFormData.ImageFor);
     if(file){data.append('image',file);}
     console.log("submitting");
-    const url = editPictureId ? `http://localhost:3000/api/gallary/${editPictureId}` : 'http://localhost:3000/api/gallary';
+    const url = editPictureId ? `https://shrinik-project.onrender.com/api/gallary/${editPictureId}` : 'https://shrinik-project.onrender.com/api/gallary';
     const method = editPictureId ? 'PUT' : 'POST';
     console.log("submitted");
     const res = await fetch(url, {
@@ -247,7 +247,7 @@ const AdminPanel = () => {
     setFile(null);
 
     // Refresh the event list
-    const updatedPictures = await (await fetch('http://localhost:3000/api/getGallary')).json();
+    const updatedPictures = await (await fetch('https://shrinik-project.onrender.com/api/getGallary')).json();
     setPictures(updatedPictures);
   }
   const handelPictureEdit=(pic)=>{
@@ -261,7 +261,7 @@ const AdminPanel = () => {
     console.log(event);
     let id=event.id;
     try {
-      const res = await fetch(`http://localhost:3000/api/events/delete/${id}`, {
+      const res = await fetch(`https://shrinik-project.onrender.com/api/events/delete/${id}`, {
         method: 'DELETE',
       });
       const result = await res.json();
@@ -276,7 +276,7 @@ const AdminPanel = () => {
     }
 
     // Refresh the event list
-    const updatedEvents = await (await fetch('http://localhost:3000/api/events/list')).json();
+    const updatedEvents = await (await fetch('https://shrinik-project.onrender.com/api/events/list')).json();
     setEvents(updatedEvents);
   };
 
