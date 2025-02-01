@@ -35,7 +35,7 @@ const TeamsPage = ({team}) => {
   useEffect(()=>{
     const fetchpics= async()=>{
       try{  
-        const res = await fetch('http://localhost:3000/api/getGallary');
+        const res = await fetch('https://shrinik-project.onrender.com/api/getGallary');
         const data = await res.json();
         console.log('Fetched pic:', data); // Log the fetched data
         if (Array.isArray(data)) {
@@ -54,7 +54,7 @@ const TeamsPage = ({team}) => {
     }
     const fetchDirector=async(team)=>{
       try{
-        const res=await fetch(`http://localhost:3000/api/getDirector/${team}`);//passteam ame to identify team
+        const res=await fetch(`https://shrinik-project.onrender.com/api/getDirector/${team}`);//passteam ame to identify team
         const data=await res.json();
         if (Array.isArray(data)) {
         const filterDirector=data.filter(e=>e.Post==='Director');
@@ -82,7 +82,7 @@ const TeamsPage = ({team}) => {
     }
     const fetchmembers=async(team)=>{
       try{
-          const res=await fetch(`http://localhost:3000/api/getMembers/${team}`);//passteam name
+          const res=await fetch(`https://shrinik-project.onrender.com/api/getMembers/${team}`);//passteam name
           const data=await res.json();
           setMemberList(data);
 
