@@ -87,7 +87,7 @@ export const Login = async (req, res) => {
             });
         }
 
-        connection.query('SELECT * FROM user WHERE email = ?', [email], async (err, results) => {
+        connection.query('SELECT * FROM user WHERE email = ?', [email], async (err, result) => {
             if (err) {
                 console.error('Error querying the database:', err);
                 return res.status(500).json({
@@ -96,15 +96,15 @@ export const Login = async (req, res) => {
                 });
             }
 
-            if (results.length === 0) {
+            if (result.length === 0) {
                 return res.status(401).json({
                     message: "No such users",
                     success: false,
-                    results:results,
+                    results:result,
                 });
             }
 
-            const user = results[0];
+            const user = result[0];
             const isMatch = await bcryptjs.compare(password, user.password);
             if (!isMatch) {
                 return res.status(401).json({
