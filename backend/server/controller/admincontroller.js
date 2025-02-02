@@ -39,6 +39,7 @@ export const Register = async (req, res) => {
                 return res.status(500).json({
                     message: "Server error",
                     success: false,
+                
                 });
             }
 
@@ -97,8 +98,9 @@ export const Login = async (req, res) => {
 
             if (results.length === 0) {
                 return res.status(401).json({
-                    message: "No such user",
+                    message: "No such users",
                     success: false,
+                    results:results,
                 });
             }
 
