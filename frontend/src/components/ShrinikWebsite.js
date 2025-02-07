@@ -847,7 +847,7 @@ const Avenues = () => {
         <h2 className="text-gray-900 text-3xl font-bold text-center mb-8">Our Avenues</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <Card className="text-center hover:shadow-purple-700 transition-all bg-purple-200">
-            <img src={getImageForAvenue('Art Avenue')} alt="Art Avenue" className="w-full h-48 object-cover" />
+            <img src={getImageForAvenue('Art Avenue')} alt="Art Avenue" className="w-full h-48 object-cover rounded-full" />
             <CardHeader>
               <Palette className="w-12 h-12 mx-auto text-purple-600" />
               <CardTitle>Art Avenue</CardTitle>
@@ -858,7 +858,7 @@ const Avenues = () => {
           </Card>
 
           <Card className="text-center hover:shadow-green-600 transition-all bg-green-200">
-            <img src={getImageForAvenue('Gaming Avenue')} alt="Gaming Avenue" className="w-full h-48 object-cover" />
+            <img src={getImageForAvenue('Gaming Avenue')} alt="Gaming Avenue" className="w-full h-48 object-cover rounded-full " />
             <CardHeader>
               <Gamepad2 className="w-12 h-12 mx-auto text-green-600" />
               <CardTitle>Gaming Avenue</CardTitle>
@@ -869,7 +869,7 @@ const Avenues = () => {
           </Card>
 
           <Card className="text-center hover:shadow-red-900 transition-all bg-red-200">
-            <img src={getImageForAvenue('Dancing Avenue')} alt="Dancing Avenue" className="w-full h-48 object-cover" />
+            <img src={getImageForAvenue('Dancing Avenue')} alt="Dancing Avenue" className="w-full h-48 object-cover rounded-full" />
             <CardHeader>
               <Music className="w-12 h-12 mx-auto text-red-600" />
               <CardTitle>Dancing Avenue</CardTitle>
@@ -880,7 +880,7 @@ const Avenues = () => {
           </Card>
 
           <Card className="text-center hover:shadow-blue-950 transition-all bg-blue-300">
-            <img src={getImageForAvenue('Singing Avenue')} alt="Singing Avenue" className="w-full h-48 object-cover" />
+            <img src={getImageForAvenue('Singing Avenue')} alt="Singing Avenue" className="w-full h-48 object-cover rounded-full" />
             <CardHeader>
               <Music className="w-12 h-12 mx-auto text-blue-600" />
               <CardTitle>Singing Avenue</CardTitle>
@@ -946,7 +946,7 @@ const Events = () => {
                   <p className="font-semibold text-sm text-gray-500">{event.venue}</p>
                   
                   <div className="mt-4">
-                    <Link href={event.applicationLink}>
+                    <Link href={event.applicationLink ? `https://${event.applicationLink}` : '#'}>
                       <button className="bg-yellow-500 text-white p-2 rounded-lg hover:bg-yellow-600 transition duration-200 w-full">
                         PARTICIPATE
                       </button>
