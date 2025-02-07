@@ -139,8 +139,11 @@ const NavBar = ({ Info, setFalse }) => {
               } transform transition-all duration-300 hover:scale-110 hover:text-blue-400 group relative`}
               onMouseEnter={() => setIsHovered(index)}
               onMouseLeave={() => setIsHovered(null)}
-              onClick={() => item.setter && setFalse(item.setter)}
-            >
+              onClick={() => {
+                if (item.setter) {
+                 setFalse(item.setter);}
+                        }}
+                       >
               <item.icon
                 className={`w-5 h-5 ${isHovered === index ? "text-blue-400" : "text-gray-300"} group-hover:animate-pulse`}
               />
@@ -174,7 +177,7 @@ const NavBar = ({ Info, setFalse }) => {
               href={item.href}
               className="flex items-center space-x-2 p-2 rounded hover:bg-gray-800 transition"
               onClick={() => {
-                item.setter && setFalse(item.setter);
+                if(item.setter)setFalse(item.setter);
                 setIsMenuOpen(false);
               }}
             >
