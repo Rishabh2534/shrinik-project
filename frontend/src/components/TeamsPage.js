@@ -53,6 +53,9 @@ SEO optimization and audience engagement are integral to our strategy, helping u
 
   })
   const [memberList,setMemberList]=useState([]);
+   const homevisit=()=>{
+      router.push('/');
+    };
   useEffect(()=>{
     const fetchpics= async()=>{
       try{  
@@ -101,9 +104,7 @@ SEO optimization and audience engagement are integral to our strategy, helping u
         console.log("errorfetching director",err);
       }
     }
-    const homevisit=()=>{
-      router.push('/');
-    };
+   
     const fetchmembers=async(team)=>{
       try{
           const res=await fetch(`https://shrinik-project.onrender.com/api/getMembers/${team}`);//passteam name
