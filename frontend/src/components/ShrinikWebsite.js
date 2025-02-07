@@ -16,7 +16,7 @@ import {
   ArrowRight, ArrowLeft, Zap, 
   Database, Rocket,
   Camera, PenTool, Book, Star, Globe,
-  Magnet, 
+  Magnet, X,Menu
 } from 'lucide-react';
 import { motion,AnimatePresence } from 'framer-motion';
 
