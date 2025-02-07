@@ -121,7 +121,7 @@ SEO optimization and audience engagement are integral to our strategy, helping u
   return (
     <div className="text-center font-sans p-8 bg-gradient-to-r from-red-900 to-blue-900 min-h-screen text-white animate-gradient">
       <button onclick={homevisit}>home</button>
-      <h1 className="text-4xl mb-8">Meet Our Technical Team</h1>
+      <h1 className="text-4xl mb-8">Meet Our {team?`${team}`:""}Team</h1>
 
       <div className="flex justify-center gap-10 mb-10">
         {/* Director Card */}
