@@ -94,121 +94,109 @@ const Gallery = () => {
 
 const NavBar = ({ Info, setFalse }) => {
   const [isHovered, setIsHovered] = useState(null);
-  const setlogindisplay=Info.login.setter;
- 
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const setlogindisplay = Info.login.setter;
+
   const navItems = [
-    { 
-      name: 'About', 
-      href: '#about', 
-      icon: Book, 
-      setter: Info.about.setter 
-    },
-    { 
-      name: 'Objectives', 
-      href: '#objectives', 
-      icon: Target, 
-      setter: Info.objective.setter 
-    },
-    { 
-      name: 'Teams', 
-      href: '#teams', 
-      icon: Users, 
-      setter: Info.team.setter 
-    },
-    { 
-      name: 'Avenues', 
-      href: '#avenues', 
-      icon: Home, 
-      setter: Info.avenues.setter 
-    },
-    { 
-      name: 'Events', 
-      href: '#events', 
-      icon: Calendar, 
-      setter: Info.events.setter 
-    },
-    { 
-      name: 'Contact', 
-      href: '#contact', 
-      icon: MessageCircle 
-    },
-    
+    { name: "About", href: "#about", icon: Book, setter: Info.about.setter },
+    { name: "Objectives", href: "#objectives", icon: Target, setter: Info.objective.setter },
+    { name: "Teams", href: "#teams", icon: Users, setter: Info.team.setter },
+    { name: "Avenues", href: "#avenues", icon: Home, setter: Info.avenues.setter },
+    { name: "Events", href: "#events", icon: Calendar, setter: Info.events.setter },
+    { name: "Contact", href: "#contact", icon: MessageCircle },
   ];
 
   return (
-    <nav 
-      className="bg-gradient-to-r from-black via-gray-900 to-black text-white p-4 sticky top-0 z-50 shadow-lg"
-    >
+    <nav className="bg-gradient-to-r from-black via-gray-900 to-black text-white p-4 sticky top-0 z-50 shadow-lg">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo Section */}
-        <a 
-        onClick={()=>Info.hero.setter(true)}>
-        <div className='flex items-center space-x-4 transform transition-transform duration-300 hover:scale-105'>
-          <img 
-            className="rounded-full h-14 w-14 object-cover border-2 border-blue-500 shadow-md" 
-            src="/images/shriniklogo.jpg" 
-            alt="Shrinik Club Logo" 
-          />
-          <h1 className="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500 tracking-wider">
-            SHRINIK CLUB
-          </h1>
-        </div>
+        <a onClick={() => Info.hero.setter(true)}>
+          <div className="flex items-center space-x-4 transform transition-transform duration-300 hover:scale-105">
+            <img
+              className="rounded-full h-14 w-14 object-cover border-2 border-blue-500 shadow-md"
+              src="/images/shriniklogo.jpg"
+              alt="Shrinik Club Logo"
+            />
+            <h1 className="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500 tracking-wider">
+              SHRINIK CLUB
+            </h1>
+          </div>
         </a>
-        {/* Navigation Links */}
-        <div className="flex items-center space-x-6">
+
+        {/* Mobile Menu Button */}
+        <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+        </button>
+
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex items-center space-x-6">
           {navItems.map((item, index) => (
             <a
               key={item.name}
               href={item.href}
-              className={`
-                flex items-center space-x-2 
-                ${isHovered === index ? 'text-blue-400' : 'text-white'}
-                transform transition-all duration-300 
-                hover:scale-110 hover:text-blue-400
-                group relative
-              `}
+              className={`flex items-center space-x-2 ${
+                isHovered === index ? "text-blue-400" : "text-white"
+              } transform transition-all duration-300 hover:scale-110 hover:text-blue-400 group relative`}
               onMouseEnter={() => setIsHovered(index)}
               onMouseLeave={() => setIsHovered(null)}
               onClick={() => item.setter && setFalse(item.setter)}
             >
-              <item.icon 
-                className={`
-                  w-5 h-5 
-                  ${isHovered === index ? 'text-blue-400' : 'text-gray-300'}
-                  group-hover:animate-pulse
-                `} 
+              <item.icon
+                className={`w-5 h-5 ${isHovered === index ? "text-blue-400" : "text-gray-300"} group-hover:animate-pulse`}
               />
               <span className="text-sm font-medium">{item.name}</span>
-              <span 
-                className={`
-                  absolute bottom-0 left-0 w-full h-0.5 bg-blue-500 
-                  transform scale-x-0 origin-left 
-                  transition-transform duration-300 
-                  ${isHovered === index ? 'scale-x-100' : ''}
-                `} 
+              <span
+                className={`absolute bottom-0 left-0 w-full h-0.5 bg-blue-500 transform scale-x-0 origin-left transition-transform duration-300 ${
+                  isHovered === index ? "scale-x-100" : ""
+                }`}
               />
             </a>
           ))}
 
           {/* Login Link */}
-          <a 
-           onClick={() => setFalse(setlogindisplay)}
-            href="#login" 
-            className="
-              flex items-center space-x-2 
-              bg-blue-600 text-white 
-              px-4 py-2 rounded-full 
-              hover:bg-blue-700 
-              transition-all duration-300 
-              transform hover:scale-105 
-              shadow-md hover:shadow-xl
-            "
+          <a
+            onClick={() => setFalse(setlogindisplay)}
+            href="#login"
+            className="flex items-center space-x-2 bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-xl"
           >
             <LogIn className="w-5 h-5" />
             <span>Admin</span>
           </a>
         </div>
       </div>
+
+      {/* Mobile Dropdown Menu */}
+      {isMenuOpen && (
+        <div className="md:hidden bg-black text-white p-4 rounded-md space-y-2 mt-2 shadow-lg">
+          {navItems.map((item, index) => (
+            <a
+              key={item.name}
+              href={item.href}
+              className="flex items-center space-x-2 p-2 rounded hover:bg-gray-800 transition"
+              onClick={() => {
+                item.setter && setFalse(item.setter);
+                setIsMenuOpen(false);
+              }}
+            >
+              <item.icon className="w-5 h-5 text-gray-300" />
+              <span>{item.name}</span>
+            </a>
+          ))}
+
+          {/* Login Link in Mobile Menu */}
+          <a
+            onClick={() => {
+              setFalse(setlogindisplay);
+              setIsMenuOpen(false);
+            }}
+            href="#login"
+            className="flex items-center space-x-2 bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-xl"
+          >
+            <LogIn className="w-5 h-5" />
+            <span>Admin</span>
+          </a>
+        </div>
+      )}
     </nav>
   );
 };
