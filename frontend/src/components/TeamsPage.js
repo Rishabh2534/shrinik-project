@@ -101,7 +101,7 @@ SEO optimization and audience engagement are integral to our strategy, helping u
         console.log("errorfetching director",err);
       }
     }
-    const homevisit(){
+    const homevisit=()=>{
       router.push('/');
     }
     const fetchmembers=async(team)=>{
