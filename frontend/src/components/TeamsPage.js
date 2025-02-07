@@ -103,7 +103,7 @@ SEO optimization and audience engagement are integral to our strategy, helping u
     }
     const homevisit=()=>{
       router.push('/');
-    }
+    };
     const fetchmembers=async(team)=>{
       try{
           const res=await fetch(`https://shrinik-project.onrender.com/api/getMembers/${team}`);//passteam name
