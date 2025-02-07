@@ -168,7 +168,7 @@ const NavBar = ({ Info, setFalse }) => {
       {/* Mobile Dropdown Menu */}
       {isMenuOpen && (
         <div className="md:hidden bg-black text-white p-4 rounded-md space-y-2 mt-2 shadow-lg">
-          {navItems.map((item, index) => (
+          {navItems.map((item) => (
             <a
               key={item.name}
               href={item.href}
@@ -546,13 +546,13 @@ const About = () => {
             <div className="space-y-2">
               <div>
                 <p className="font-semibold text-gray-800">President</p>
-                <p className="text-gray-700">Aman Gupta</p>
-                <p className="text-gray-600 text-sm">amanuniquecoder@gmail.com</p>
+                <p className="text-gray-700">Fiza Yasmin</p>
+                <p className="text-gray-600 text-sm">abc@gmail.com</p>
               </div>
               <div>
-                <p className="font-semibold text-gray-800">Secretary</p>
-                <p className="text-gray-700">Shubhi Singh</p>
-                <p className="text-gray-600 text-sm">shubhis921@gmail.com</p>
+                <p className="font-semibold text-gray-800">Vice President</p>
+                <p className="text-gray-700">Aditya Singh</p>
+                <p className="text-gray-600 text-sm">abc@gmail.com</p>
               </div>
             </div>
           </motion.div>
