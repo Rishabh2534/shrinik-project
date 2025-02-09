@@ -47,3 +47,18 @@ To deploy this project run
   npm run dev (frontend)
 ```
 
+## Usage/Examples
+
+**User Guide for Admin**
+- For Images(imageFor):  TeamName space Post(designation) OR AvenueName space Avenue.
+- TeamNames are: Tech,Editorial,Photography,Management,Design,Photography, Media,Marketing.
+- Posts :Director, Codirector.
+- AvenueNames: Art,Gaming,Singing,Dancing.
+- type :module.
+
+
+## Support
+
+For support, email rishabhmishra2534@gmail.com.
+
+
