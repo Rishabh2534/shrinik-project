@@ -20,7 +20,7 @@ This is a dynamic club website where an authenticated admin can manage events, m
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot]([https://via.placeholder.com/468x300?text=App+Screenshot+Here](https://drive.google.com/file/d/1NGLCIXNH61umlC9Z6DJQE_TYHBFzJsbw/view?usp=sharing))
 
 
 ## Features
