@@ -992,20 +992,20 @@ const Contact = () => (
         <p className="text-sm mb-2">PLOT NO.2 , APJ ABDUL KALAM ROAD, KNOWLEDGE PARK 3, GREATER NOIDA, UTTAR PRADESH, INDIA, 201306</p>
         <p className="text-lg font-bold mb-4">HELPLINE NO. 8010-000-234</p>
         <div className="flex justify-center space-x-4 mb-6">
-          <a href="https://facebook.com" className="text-white hover:text-gray-400">
+          <a href="https://m.facebook.com/shrinikclub/?locale=sr_RS" className="text-white hover:text-gray-400">
             <FaFacebookF size={24} />
           </a>
-          <a href="https://twitter.com" className="text-white hover:text-gray-400">
+          <a href="https://x.com/shrinik_glbajaj" className="text-white hover:text-gray-400">
             <FaTwitter size={24} />
           </a>
-          <a href="https://linkedin.com" className="text-white hover:text-gray-400">
+          <a href="https://www.linkedin.com/company/shrinik-club/" className="text-white hover:text-gray-400">
             <FaLinkedinIn size={24} />
           </a>
-          <a href="https://youtube.com" className="text-white hover:text-gray-400">
+          <a href="https://youtube.com/@shrinikclub8883?si=46vl1PWU4U1qV8QB" className="text-white hover:text-gray-400">
             <FaYoutube size={24} />
           </a>
-          <a href="https://instagram.com" className="text-white hover:text-gray-400">
-            <FaInstagram size={24} />
+          <a href="https://www.instagram.com/shrinik_glbajaj?igsh=MWI1ZTFqdnJiYzRyeg==" className="text-white hover:text-gray-400">
+             <FaInstagram size={24} />
           </a>
           <a href="https://rss.com" className="text-white hover:text-gray-400">
             <FaRss size={24} />
@@ -1018,9 +1018,9 @@ const Contact = () => (
           <span>|</span>
           <a href="#" className="text-white hover:text-blue-400">Terms and Conditions</a>
           <span>|</span>
-          <a href="#" className="text-white hover:text-blue-400">Site Map</a>
+          <a href="#" className="text-white hover:text-blue-400">.</a>
           <span>|</span>
-          <span>© 2024 - All Rights Reserved.</span>
+          <span>© 2025- All Rights Reserved.</span>
         </div>
       </div>
     </footer>
