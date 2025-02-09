@@ -121,10 +121,10 @@ SEO optimization and audience engagement are integral to our strategy, helping u
   },[team]);
   return (
     <div className="text-center font-sans p-8 bg-gradient-to-r from-red-900 to-blue-900 min-h-screen text-white animate-gradient">
-      <button onClick={homevisit}>home</button>
+      <button onClick={homevisit}>'</button>
       <h1 className="text-4xl mb-8">Meet Our {team ? `${team} ` : ""}Team</h1>
 
-      <div className="flex justify-center gap-10 mb-10">
+      <div className="flex flex-col md:flex-row justify-center gap-10 mb-10">
         {/* Director Card */}
         <div className="border-2 border-yellow-400 rounded-lg p-5 w-64 shadow-lg bg-white bg-opacity-90 transform transition duration-300 hover:scale-105 text-blue-400">
           <img src={pic1 || "/images/directorDefault.webp"}  className="rounded-full mb-4 h-50"/>
