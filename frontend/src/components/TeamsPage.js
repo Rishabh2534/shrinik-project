@@ -157,7 +157,7 @@ SEO optimization and audience engagement are integral to our strategy, helping u
         <ul className="flex flex-wrap justify-center list-none">
          { memberList.map((member)=>(
           <li className="m-2 p-3 bg-green-200 rounded-lg shadow-md font-bold text-orange-600">
-           <a href={member.linkedinUrl ? `https://${member.linkedinUrl}` : '#'}>{member.name||'member'}</a>
+           <a href={member.linkedinUrl ? `https://${member.linkedInUrl}` : '#'}>{member.name||'member'}</a>
             </li>
 
          ))}
