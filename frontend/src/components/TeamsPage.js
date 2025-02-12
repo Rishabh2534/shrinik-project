@@ -127,28 +127,30 @@ SEO optimization and audience engagement are integral to our strategy, helping u
 
       <div className="flex flex-col md:flex-row justify-center gap-10 mb-10">
         {/* Director Card */}
-        <div className="border-2 border-yellow-400 rounded-lg p-5 w-64 shadow-lg bg-white bg-opacity-90 transform transition duration-300 hover:scale-105 text-blue-400">
-          <img src={pic1 || "/images/directorDefault.webp"}  className="rounded-full mb-4 h-50"/>
-          <h3 className="text-xl text-indigo-700">{director.name||'Director name'}</h3>
-          <p className="text-indigo-700">Team Director</p>
-          <p>Email: {director.email||'abc@gmail.com'}</p>
-          <p>Phone: {director.phone||'0000000000'}</p>
-          <a href={director.linkedinUrl ? `https://${director.linkedinUrl}` : '#'} target="_blank" rel="noopener noreferrer">
-          LinkedIn
-          </a>
-        </div>
+      <div className="border-2 border-yellow-400 rounded-lg p-5 w-64 shadow-lg bg-white bg-opacity-90 transform transition duration-300 hover:scale-105 text-blue-400">
+    <img src={pic1 || "/images/directorDefault.webp"} alt="Director" 
+         className="rounded-full mb-4 w-32 h-32 object-cover"/>
+    <h3 className="text-xl text-indigo-700">{director.name || 'Director name'}</h3>
+    <p className="text-indigo-700">Team Director</p>
+    <p>Email: {director.email || 'abc@gmail.com'}</p>
+    <p>Phone: {director.phone || '0000000000'}</p>
+    <a href={director.linkedinUrl ? `https://${director.linkedinUrl}` : '#'} target="_blank" rel="noopener noreferrer">
+        LinkedIn
+    </a>
+</div>
 
-        {/* Co-Director Card */}
-        <div className="border-2 border-yellow-400 rounded-lg p-5 w-64 shadow-lg bg-white bg-opacity-90 transform transition duration-300 hover:scale-105 text-blue-400">
-          <img src={pic2||"/images/codirectorDefault.webp"} alt="Co-Director" className="rounded-full mb-4 h-50" />
-          <h3 className="text-xl text-indigo-700">{codirector.name||'Codirector'}</h3>
-          <p className="text-indigo-700">Co-Director</p>
-          <p>Email: {codirector.email||'abc@gmail.com'}</p>
-          <p>Phone: {codirector.phone||'0000000000'}</p>
-          <a href={codirector.linkedinUrl ? `https://${codirector.linkedinUrl}` : '#'} target="_blank" rel="noopener noreferrer">
-          LinkedIn
-          </a>
-        </div>
+{/* Co-Director Card */}
+<div className="border-2 border-yellow-400 rounded-lg p-5 w-64 shadow-lg bg-white bg-opacity-90 transform transition duration-300 hover:scale-105 text-blue-400">
+    <img src={pic2 || "/images/codirectorDefault.webp"} alt="Co-Director" 
+         className="rounded-full mb-4 w-32 h-32 object-cover"/>
+    <h3 className="text-xl text-indigo-700">{codirector.name || 'Codirector'}</h3>
+    <p className="text-indigo-700">Team Co-Director</p>
+    <p>Email: {codirector.email || 'abc@gmail.com'}</p>
+    <p>Phone: {codirector.phone || '0000000000'}</p>
+    <a href={codirector.linkedinUrl ? `https://${codirector.linkedinUrl}` : '#'} target="_blank" rel="noopener noreferrer">
+        LinkedIn
+    </a>
+</div>
       </div>
 
       {/* Other Team Members */}
