@@ -437,6 +437,7 @@ const AdminPanel = () => {
         </div>
   
         {/* Right Column: Picture Management */}
+{/*
         <div className="space-y-6">
           <div className="bg-white shadow-md rounded-lg p-6">
             <form onSubmit={handleImageSubmit} className="space-y-4">
@@ -470,8 +471,75 @@ const AdminPanel = () => {
                 </button>
               </div>
             </form>
-          </div>
-  
+          </div>*/
+}
+           <div className="space-y-6">
+  <div className="bg-white shadow-md rounded-lg p-6">
+    <form onSubmit={handleImageSubmit} className="space-y-4">
+      <div className="flex flex-col">
+        <label htmlFor="ImageFor" className="text-gray-800 font-medium mb-2">
+          Image Description
+        </label>
+        <select
+          id="ImageFor"
+          name="ImageFor"
+          value={pictureFormData.ImageFor}
+          onChange={handleImageChange}
+          className="w-full p-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-800"
+        >
+          <option value="" disabled>Select Image For</option>
+
+          {/* Team Names and Posts */}
+          <optgroup label="Team & Post">
+            <option value="Tech Director">Tech Director</option>
+            <option value="Tech Codirector">Tech Codirector</option>
+            <option value="Editorial Director">Editorial Director</option>
+            <option value="Editorial Codirector">Editorial Codirector</option>
+            <option value="Photography Director">Photography Director</option>
+            <option value="Photography Codirector">Photography Codirector</option>
+            <option value="Management Director">Management Director</option>
+            <option value="Management Codirector">Management Codirector</option>
+            <option value="Design Director">Design Director</option>
+            <option value="Design Codirector">Design Codirector</option>
+            <option value="Media Director">Media Director</option>
+            <option value="Media Codirector">Media Codirector</option>
+            <option value="Marketing Director">Marketing Director</option>
+            <option value="Marketing Codirector">Marketing Codirector</option>
+          </optgroup>
+
+          {/* Avenue Names */}
+          <optgroup label="Avenue">
+            <option value="Art Avenue">Art Avenue</option>
+            <option value="Gaming Avenue">Gaming Avenue</option>
+            <option value="Singing Avenue">Singing Avenue</option>
+            <option value="Dancing Avenue">Dancing Avenue</option>
+          </optgroup>
+        </select>
+      </div>
+
+      <div className="flex flex-col">
+        <label htmlFor="image" className="text-gray-800 font-medium mb-2">
+          Upload Image
+        </label>
+        <input
+          type="file"
+          onChange={handleFileChange}
+          className="w-full p-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+      </div>
+
+      <div className="text-center">
+        <button
+          type="submit"
+          className="mt-4 bg-blue-500 text-white p-3 rounded-lg hover:bg-blue-600 transition duration-200"
+        >
+          {editPictureId ? 'Update Image' : 'Add Image'}
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
           {/* Pictures Gallery */}
           <div className="bg-white shadow-md rounded-lg">
             <h2 className="text-blue-800 text-2xl font-semibold text-center py-4">Pictures Gallery</h2>
