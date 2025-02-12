@@ -190,28 +190,38 @@ export default function LoginPage() {
               {activeTab === 'signup' && (
                 <form onSubmit={handleSignup} className="space-y-4">
                   <div className="space-y-2">
-                  <div className="relative text-gray-500">
-                      <Key className="absolute left-3 top-3 h-5 w-5 text-gray-800" />
-                      <Input
-                        type="text"
-                        placeholder="Team"
-                        className="pl-10"
-                        value={signupData.Team}
-                        onChange={(e) => setSignupData({ ...signupData, Team: e.target.value })}
-                        required
-                      />
-                    </div>
-                    <div className="relative text-gray-500">
-                      <Key className="absolute left-3 top-3 h-5 w-5 text-gray-800" />
-                      <Input
-                        type="text"
-                        placeholder="Post"
-                        className="pl-10"
-                        value={signupData.Post}
-                        onChange={(e) => setSignupData({ ...signupData, Post: e.target.value })}
-                        required
-                      />
-                    </div>
+                <div className="relative text-gray-500">
+  <Key className="absolute left-3 top-3 h-5 w-5 text-gray-800" />
+  <select
+    className="pl-10 w-full border rounded-lg p-2"
+    value={signupData.Team}
+    onChange={(e) => setSignupData({ ...signupData, Team: e.target.value })}
+    required
+  >
+    <option value="">Select Team</option>
+    <option value="Tech">Tech</option>
+    <option value="Editorial">Editorial</option>
+    <option value="Photography">Photography</option>
+    <option value="Management">Management</option>
+    <option value="Design">Design</option>
+    <option value="Media">Media</option>
+    <option value="Marketing">Marketing</option>
+  </select>
+</div>
+
+<div className="relative text-gray-500">
+  <Key className="absolute left-3 top-3 h-5 w-5 text-gray-800" />
+  <select
+    className="pl-10 w-full border rounded-lg p-2"
+    value={signupData.Post}
+    onChange={(e) => setSignupData({ ...signupData, Post: e.target.value })}
+    required
+  >
+    <option value="">Select Post</option>
+    <option value="Director">Director</option>
+    <option value="Codirector">Codirector</option>
+  </select>
+</div>
                     <div className="relative text-gray-500">
                       <Key className="absolute left-3 top-3 h-5 w-5 text-gray-800" />
                       <Input
