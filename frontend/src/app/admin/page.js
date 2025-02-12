@@ -538,7 +538,7 @@ const AdminPanel = () => {
       </div>
     </form>
   </div>
-</div>
+
 
           {/* Pictures Gallery */}
           <div className="bg-white shadow-md rounded-lg">
