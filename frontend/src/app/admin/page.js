@@ -32,7 +32,7 @@ const AdminPanel = () => {
       method: methd,
       body: data,
     });
-
+    alert("Added Member Successfully may take some time to reflect in here");
     const result = await res.json();
     console.log(result);
     // Reset form after submission
@@ -65,6 +65,7 @@ const AdminPanel = () => {
       const res = await fetch(`https://shrinik-project.onrender.com/api/member/delete/${id}`, {
         method: 'DELETE',
       });
+      alert("Deleted Member Successfully May be reflected soon");
       const result = await res.json();
       console.log(result);
       if (result.success) {
@@ -101,7 +102,7 @@ const AdminPanel = () => {
         method: 'DELETE',
       });
       const result = await res.json();
-      console.log(result);
+      alert("Deleted Admin may be reflected soon");
       if (result.success) {
         setAdminList(AdminList.filter(member => member.id !== id));
       } else {
@@ -136,7 +137,7 @@ const AdminPanel = () => {
       try {
         const res = await fetch('https://shrinik-project.onrender.com/api/events/list');
         const data = await res.json();
-        console.log('Fetched events:', data); // Log the fetched data
+         // Log the fetched data
         if (Array.isArray(data)) {
           setEvents(data);
         } else {
@@ -205,7 +206,7 @@ const AdminPanel = () => {
       method: method,
       body: data,
     });
-
+    alert("Event added Successfully");
     const result = await res.json();
     console.log(result);
 
@@ -236,7 +237,7 @@ const AdminPanel = () => {
       method: method,
       body: data,
     });
-
+    alert("Submited The change or Added Pic Wait for sone time to reflect in here");
     const result = await res.json();
     console.log(result);
 
