@@ -505,6 +505,7 @@ const AdminPanel = () => {
             <option value="Media Codirector">Media Codirector</option>
             <option value="Marketing Director">Marketing Director</option>
             <option value="Marketing Codirector">Marketing Codirector</option>
+            <option value="gallary">Website Gallary</option>
           </optgroup>
 
           {/* Avenue Names */}
