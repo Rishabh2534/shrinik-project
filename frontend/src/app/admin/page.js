@@ -436,8 +436,8 @@ const AdminPanel = () => {
           </div>
         </div>
   
-        {/* Right Column: Picture Management */}
-{/*
+        {/* Right Column: Picture Management 
+
         <div className="space-y-6">
           <div className="bg-white shadow-md rounded-lg p-6">
             <form onSubmit={handleImageSubmit} className="space-y-4">
