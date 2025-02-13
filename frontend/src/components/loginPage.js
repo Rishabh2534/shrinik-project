@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription } from '@/components/ui/alert';
-import { GraduationCap,Key, Lock, User } from 'lucide-react';
+import { GraduationCap,Key, Lock, User ,Mail} from 'lucide-react';
  
 export default function LoginPage() {
   const router = useRouter();
@@ -245,10 +245,10 @@ export default function LoginPage() {
                       />
                     </div>
                     <div className="relative text-gray-500">
-                      <User className="absolute left-3 top-3 h-5 w-5 text-gray-800" />
+                      <Mail className="absolute left-3 top-3 h-5 w-5 text-gray-800" />
                       <Input
                         type="text"
-                        placeholder="User email"
+                        placeholder="User Name (email) "
                         className="pl-10"
                         value={signupData.email}
                         onChange={(e) => setSignupData({ ...signupData, email: e.target.value })}
