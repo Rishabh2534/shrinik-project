@@ -248,7 +248,7 @@ export default function LoginPage() {
                       <User className="absolute left-3 top-3 h-5 w-5 text-gray-800" />
                       <Input
                         type="text"
-                        placeholder="User Name"
+                        placeholder="User email"
                         className="pl-10"
                         value={signupData.email}
                         onChange={(e) => setSignupData({ ...signupData, email: e.target.value })}
